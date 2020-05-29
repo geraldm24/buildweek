@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% set active_page = "prediction_form" %}
+
+{% block content %}
+    <h2>Prediction Time</h2>
+
+    <p>Use the form below to predict which user is more likely to say a given tweet...</p>
+
+    <form action="/" method="POST">
+
+        <label>Twitter User A:</label>
+        <select name="screen_name_a">
+            <option value="MileyCyrus" selected="true">@MileyCyrus</option>
+            <option value="s2t2">@s2t2</option>
+            <option value="kobebryant">@kobebryant</option>
+            <option value="kevinhart">@kevinhart</option>
+        </select>
+        <br>
+
+        <label>Twitter User B:</label>
+        <select name="screen_name_b">
+
+            <option value="MileyCyrus" >@MileyCyrus</option>
+            <option value="s2t2" selected="true">@s2t2</option>
+            <option value="kobebryant">@kobebryant</option>
+            <option value="kevinhart">@kevinhart</option>
+          </select>
+        <br>
+
+        <label>Tweet Text:</label>
+        <input type="text" name="tweet_text" placeholder="twerk team" value="twerk team">
+        <br>
+
+        <button>Submit</button>
+    </form>
+{% endblock %}
